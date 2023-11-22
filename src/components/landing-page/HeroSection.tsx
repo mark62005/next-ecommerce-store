@@ -26,6 +26,8 @@ const HeroSection = () => {
 					<Button variant="outline">Our quality promise &rarr;</Button>
 				</div>
 			</div>
+
+			{/* TODO: List products */}
 		</MaxWidthContainer>
 	);
 };
