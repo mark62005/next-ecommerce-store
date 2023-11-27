@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
 import { buttonVariants } from "./ui/button";
 import MaxWidthContainer from "./MaxWidthContainer";
 import NavItems from "./NavItems";
@@ -32,27 +33,27 @@ const Navbar = () => {
 							<div className="ml-auto flex items-center">
 								<div className="hidden lg:flex lg:flex-1 lg:justify-between lg:items-center lg:space-x-4">
 									{user ? null : (
-										<Link
-											href="/sign-in"
+										<LoginLink
+											// href="/sign-in"
 											className={buttonVariants({
 												variant: "ghost",
 											})}
 										>
 											Sign In
-										</Link>
+										</LoginLink>
 									)}
 
 									{user ? (
 										<div className=""></div>
 									) : (
-										<Link
-											href="/register"
+										<RegisterLink
+											// href="/register"
 											className={buttonVariants({
 												variant: "ghost",
 											})}
 										>
 											Create an Account
-										</Link>
+										</RegisterLink>
 									)}
 
 									<div className="ml-4 flow-root">
